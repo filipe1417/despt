@@ -38,8 +38,9 @@ Exemplos:
 
 Para contribuir, faça um fork do meu repositório e modifique o que é desejar. Após isso, faça o pull request e será analisado.\
 Alguns pontos interessantes para a contribuição mas que não são obrigatórios - visto que ao analisar o request, posso adiciona-los:
+* Você pode modificar qualquer coisa do código, sem restrições. Seja para adicionar, modificar ou remover alguma parte.
 * Ao modificar o código, adicionar uma nova linha com a versão seguindo o padrão já estabelecido no código: Versão 1.x - Essas mudanças aconteceram
-* Pode adicionar o seu nome ou link do github como comentário no início do código, dentro do header comentado, para aparecer como contribuinte.
+* Pode adicionar o seu nome ou link do github como comentário no início do código, dentro do header comentado, para aparecer como contribuinte
 
 ## A fazer
 
