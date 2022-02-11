@@ -51,9 +51,9 @@ case "$1" in
 Utilize -h ou --help para ajuda"
             exit 1
         else
-            TIPO_PARA_EXTRAIR=$(file $ARQUIVO)
             ARQUIVO=$OPCAO
-            ARGUMENTO=$ARQUIVO
+            TIPO_PARA_EXTRAIR=$(file $ARQUIVO)
+            ARGUMENTOS=$ARQUIVO
 
             if [ "$2" != "" ]
             then
