@@ -21,10 +21,10 @@ Para utilizar o script de forma global, independente do seu diretório atual e s
 
 Uso: ./despt [-h, -V, Arquivo] [Local]
 
--h, --help      Tela de ajuda sobre o funcionamento do script
+-h, --help      Tela de ajuda sobre o funcionamento do script\
 -v, --version   Imprime a versão atual
 
-Ao passar um arquivo como primeiro argumento, será realizada a sua extração para o diretório atual.
+Ao passar um arquivo como primeiro argumento, será realizada a sua extração para o diretório atual.\
 Para que o diretório destino seja alterado, deve-se passa-lo como segundo argumento.
 
 Exemplos: 
@@ -36,7 +36,7 @@ Exemplos:
 
 ## Como contribuir
 
-Para contribuir, faça um fork do meu repositório e modifique o que é desejar. Após isso, faça o pull request e será analisado.
+Para contribuir, faça um fork do meu repositório e modifique o que é desejar. Após isso, faça o pull request e será analisado.\
 Alguns pontos interessantes para a contribuição mas que não são obrigatórios - visto que ao analisar o request, posso adiciona-los:
 * Ao modificar o código, adicionar uma nova linha com a versão seguindo o padrão já estabelecido no código: Versão 1.x - Essas mudanças aconteceram
 * Pode adicionar o seu nome ou link do github como comentário no início do código, dentro do header comentado, para aparecer como contribuinte.
