@@ -1,9 +1,14 @@
 #!/usr/bin/bash
-#
-#Versão 1.0 - Arquivo inicial do script
-#Versão 1.1 - Criação de opções -v,--version e -h,--help
-#
+##############################################################                                                         
+#                          HEADER                            #
+#                                                            #
+#Versão 1.0 - Arquivo inicial do script                      #
+#Versão 1.1 - Criação de opções -v,--version e -h,--help     #
+#                                                            #
+#Filipe                                                      #
+##############################################################
 
+#Versionamento automático de acordo com adição das linhas de "Versão..." no HEADER
 VERSAO=$(\
     grep "^#Versão" $0 \
     | tail -1 \
@@ -24,6 +29,9 @@ MENSAGEM_DE_USO="
 
     No momento, os tipos de arquivos suportados para extração são: tar, tar.gz(gzip), tar.xz(bzip2) e zip.
 "
+#Optei por utilizar um case dentro de outro para a escolha das opções.
+#De começo, é testado se o usuário está usando algum dos argumentos básicos de ajuda ou versão (-h,--help e -V,--version)
+#Caso o primeiro argumento não seja nenhuma dessas opções, o programa entra no outro case, agora para testar se recebeu um arquivo válido dentre as opções.
 
 case "$1" in
     -h | --help)
