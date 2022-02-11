@@ -1,0 +1,80 @@
+#!/usr/bin/bash
+#
+#Versão 1.0 - Arquivo inicial do script
+#Versão 1.1 - Criação de opções -v,--version e -h,--help
+#
+
+VERSAO=$(\
+    grep "^#Versão" $0 \
+    | tail -1 \
+    | cut -d "-" -f 1 \
+    | cut -d " " -f 2 \
+)
+NOME_DO_PROGRAMA="$0"
+OPCAO=$1
+LOCAL=$2
+MENSAGEM_DE_USO="
+    Uso: $NOME_DO_PROGRAMA [-h, -V, Arquivo] [Local]
+
+    -h, --help      Tela de ajuda sobre o script
+    -V, --version   Imprime a versão do script
+
+    Ao passar o arquivo como primeiro argumento, será realizada a extração para o diretório atual.
+    Para que o diretório destino seja alterado, deve-se passa-lo como segundo argumento.
+
+    No momento, os tipos de arquivos suportados para extração são: tar, tar.gz(gzip), tar.xz(bzip2) e zip.
+"
+
+case "$1" in
+    -h | --help)
+        echo "$MENSAGEM_DE_USO"
+        exit 0
+    ;;
+
+    -V | --version)
+        echo "$VERSAO"
+        exit 0
+    ;;
+
+    *)
+        if [ "$1" == "" ]
+        then
+            echo "Insira um argumento válido
+Utilize -h ou --help para ajuda"
+            exit 1
+        else
+            TIPO_PARA_EXTRAIR=$(file $ARQUIVO)
+            ARQUIVO=$OPCAO
+            ARGUMENTO=$ARQUIVO
+
+            if [ "$2" != "" ]
+            then
+                ARGUMENTOS="$ARQUIVO -C $LOCAL"
+            fi
+
+            case "$TIPO_PARA_EXTRAIR" in
+                *"bzip2"*)
+                    tar -xjf $ARGUMENTOS
+                ;;
+
+                *"gzip"*)
+                    tar -xzf $ARGUMENTOS
+                ;;
+
+                *"tar"*)
+                    tar -xf $ARGUMENTOS
+                ;;
+
+                *"Zip"*)
+                    ARGUMENTOS="$ARQUIVO -d $LOCAL"
+                    unzip $ARGUMENTOS
+                ;;
+
+                *)
+                    echo "Tipo de arquivo não suportado para extração"
+                    exit 1
+                ;;
+            esac
+        fi
+    ;;
+esac
