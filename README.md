@@ -4,7 +4,7 @@
 ## Tópicos abordados no README
 
 1. [Sobre e como utilizar](#sobre-o-script-e-como-utiliza-lo)
-2. [Como contribuir e detalhes importantes](#como-contribuir-e-detalhes-importantes)
+2. [Como contribuir](#como-contribuir)
 3. [A fazer](#a-fazer)
 
 ## Sobre o script e como utiliza-lo
