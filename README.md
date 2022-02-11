@@ -1,5 +1,6 @@
 
 # despt
+Antes de tudo, para contato pode utilizar o e-mail: filipe.araujo@ee.ufcg.edu.br ou instagram @filferraraujo
 
 ## Tópicos abordados no README
 
