@@ -14,7 +14,7 @@ Esse é um script feito em shell script com objetivo de descompactar arquivos ou
 
 #### Como utilizar globalmente
 
-Para utilizar o script de forma global, independente do seu diretório atual e sem executar utilizando o caminho, exemplo ./despt ou ./despt.sh, é preciso realizar alguns passos.
+Para utilizar o script de forma global, independente do seu diretório atual e sem executar utilizando o caminho - exemplo: ./despt ou ./despt.sh - é preciso realizar alguns passos.
 1. Dar permissão de execução para o script, caso não tenha, utilizando o comando chmod +x
 2. Mover o script para um diretório presente no seu PATH
 
